@@ -1,0 +1,13 @@
+{
+    "name": "most-significant-bit/oauth2-client-persister",
+    "description": "OAuth 2.0 Client token persister.",
+    "authors": [
+        {
+            "name": "Michal Kopacz",
+            "email": "michalkopacz.mk@gmail.com"
+        }
+    ],
+    "require": {
+        "most-significant-bit/oauth2-client": "~0.1"
+    }
+}
