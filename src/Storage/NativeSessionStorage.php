@@ -55,7 +55,11 @@ class NativeSessionStorage implements StorageInterface
 
         $accessTokenData =  new AccessTokenData();
         $accessTokenData->setAccessToken(new AccessToken($rawData['access_token']));
-        $accessTokenData->setRefreshToken(new RefreshToken($rawData['refresh_token']));
+
+        if ($rawData['refresh_token'] !== null) {
+            $accessTokenData->setRefreshToken(new RefreshToken($rawData['refresh_token']));
+        }
+
         $accessTokenData->setExpirationDate(DateTime::createFromTimestamp($rawData['expiration_timestamp']));
 
         return $accessTokenData;
