@@ -8,6 +8,24 @@
         }
     ],
     "require": {
+        "php" : ">=5.3.3",
+        "beberlei/assert": "~2.3",
+        "nesbot/carbon": "~1.14",
         "most-significant-bit/oauth2-client": "~0.1"
+    },
+    "require-dev": {
+        "php": ">=5.3.3",
+        "phpunit/phpunit": "~4.0",
+        "squizlabs/php_codesniffer": "~2.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "MostSignificantBit\\OAuth2\\Client\\Persister": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MostSignificantBit\\OAuth2\\Client\\Persister\\Tests\\Unit\\": "tests/unit/phpunit/"
+        }
     }
 }
