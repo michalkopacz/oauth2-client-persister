@@ -17,6 +17,7 @@ use MostSignificantBit\OAuth2\Client\Parameter\ExpiresIn;
 use MostSignificantBit\OAuth2\Client\Parameter\RefreshToken;
 use MostSignificantBit\OAuth2\Client\Persister\Storage\AccessTokenData;
 use MostSignificantBit\OAuth2\Client\Persister\Storage\StorageInterface;
+use MostSignificantBit\OAuth2\Client\Persister\User\Identity;
 use MostSignificantBit\OAuth2\Client\Persister\User\IdentityProviderInterface;
 
 class Persister
@@ -55,10 +56,10 @@ class Persister
     }
 
     /**
-     * @param UserIdentity $userIdentity
+     * @param Identity $userIdentity
      * @return AccessToken|null
      */
-    public function getAccessToken(UserIdentity $userIdentity)
+    public function getAccessToken(Identity $userIdentity)
     {
         $accessTokenData = $this->storage->getAccessTokenData($userIdentity);
 
