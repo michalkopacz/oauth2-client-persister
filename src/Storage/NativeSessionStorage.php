@@ -36,7 +36,7 @@ class NativeSessionStorage implements StorageInterface
     {
         $_SESSION[$this->rootKey][$userIdentity->getUserId()] =  array(
             'access_token'         => $accessTokenData->getAccessToken()->getValue(),
-            'refresh_token'        => $accessTokenData->getRefreshToken()->getValue(),
+            'refresh_token'        => $accessTokenData->getRefreshToken() !== null ? $accessTokenData->getRefreshToken()->getValue() : null,
             'expiration_timestamp' => $accessTokenData->getExpirationDate()->getTimestamp(),
         );
     }

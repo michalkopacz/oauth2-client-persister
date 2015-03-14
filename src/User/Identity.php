@@ -19,6 +19,6 @@ class Identity
 
     public function getUserId()
     {
-        return $this->$id;
+        return $this->id;
     }
 } 
