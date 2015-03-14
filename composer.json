@@ -20,7 +20,7 @@
     },
     "autoload": {
         "psr-4": {
-            "MostSignificantBit\\OAuth2\\Client\\Persister": "src/"
+            "MostSignificantBit\\OAuth2\\Client\\Persister\\": "src/"
         }
     },
     "autoload-dev": {
