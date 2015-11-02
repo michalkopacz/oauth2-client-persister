@@ -9,14 +9,18 @@
     ],
     "require": {
         "php" : ">=5.3.3",
-        "beberlei/assert": "~2.3",
-        "nesbot/carbon": "~1.14",
-        "most-significant-bit/oauth2-client": "~0.1"
+        "beberlei/assert": "^2.3",
+        "nesbot/carbon": "^1.14",
+        "most-significant-bit/oauth2-client": "^0.2"
     },
     "require-dev": {
         "php": ">=5.3.3",
-        "phpunit/phpunit": "~4.0",
-        "squizlabs/php_codesniffer": "~2.2"
+        "coduo/tutu": "dev-master",
+        "coduo/tutu-faker-extension": "dev-master",
+        "coduo/tutu-twig-extension": "dev-master",
+        "phpunit/phpunit": "^4.0",
+        "symfony/process": "^2.6",
+        "squizlabs/php_codesniffer": "^2.2"
     },
     "autoload": {
         "psr-4": {
@@ -25,7 +29,8 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "MostSignificantBit\\OAuth2\\Client\\Persister\\Tests\\Unit\\": "tests/unit/phpunit/"
+            "MostSignificantBit\\OAuth2\\Client\\Persister\\Tests\\Unit\\": "tests/unit/phpunit/",
+            "MostSignificantBit\\OAuth2\\Client\\Persister\\Tests\\Integration\\": "tests/unit/integration/"
         }
     }
 }

@@ -12,6 +12,12 @@
         </testsuite>
     </testsuites>
 
+    <testsuites>
+        <testsuite name="OAuth2ClientPersisterIntegration">
+            <directory>tests/integration/phpunit/</directory>
+        </testsuite>
+    </testsuites>
+
     <logging>
         <log type="coverage-html" target="data/tests/coverage"/>
     </logging>

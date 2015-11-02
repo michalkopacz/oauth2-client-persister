@@ -1,0 +1,39 @@
+authorization_code_grant:
+  request:
+    path: "/oauth2/token"
+    methods: ['POST']
+    headers:
+      Authorization: Basic @string@
+    request:
+      grant_type: authorization_code
+      code: SplxlOBeZQQYbYS6WxSbIA
+  response:
+    headers:
+      Content-Type: application/json
+    content: |
+      {
+        "access_token":"2YotnFZFEjr1zCsicMWpAA",
+        "token_type":"Bearer",
+        "expires_in":2,
+        "refresh_token":"tGzv3JOkF0XG5Qx2TlKWIA"
+      }
+
+refresh_token_grant:
+ request:
+   path: "/oauth2/token"
+   methods: ['POST']
+   headers:
+     Authorization: Basic @string@
+   request:
+     grant_type: refresh_token
+     refresh_token: tGzv3JOkF0XG5Qx2TlKWIA
+ response:
+   headers:
+     Content-Type: application/json
+   content: |
+      {
+        "access_token":"3YotnFZFEjr1zCsicMWpAA",
+        "token_type":"Bearer",
+        "expires_in":2,
+        "refresh_token":"dD3BGS4cfASc3CFS23caxcs"
+      }

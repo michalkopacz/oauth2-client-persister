@@ -19,6 +19,7 @@ use MostSignificantBit\OAuth2\Client\Persister\Storage\AccessTokenData;
 use MostSignificantBit\OAuth2\Client\Persister\Storage\StorageInterface;
 use MostSignificantBit\OAuth2\Client\Persister\User\Identity;
 use MostSignificantBit\OAuth2\Client\Persister\User\IdentityProviderInterface;
+use MostSignificantBit\OAuth2\Client\Persister\User\SimpleIdentityProvider;
 
 class Persister
 {
@@ -100,15 +101,17 @@ class Persister
     }
 
     /**
-     * @param UserIdentity $userIdentity
+     * @param Identity $userIdentity
      * @param RefreshToken $refreshToken
      * @return AccessToken|null
      */
-    protected function refreshAccessToken(UserIdentity $userIdentity, RefreshToken $refreshToken)
+    protected function refreshAccessToken(Identity $userIdentity, RefreshToken $refreshToken)
     {
         $accessTokenRequest = new AccessTokenRequest($refreshToken);
         $grant = new RefreshTokenGrant($accessTokenRequest);
 
-        return $this->obtainAccessToken($userIdentity, $grant);
+        $identityProvider = new SimpleIdentityProvider($userIdentity);
+
+        return $this->obtainAccessToken($identityProvider, $grant);
     }
 } 

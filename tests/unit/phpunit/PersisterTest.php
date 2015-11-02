@@ -7,12 +7,10 @@
 
 namespace MostSignificantBit\OAuth2\Client\Persister\Tests\Unit;
 
-
 class PersisterTest extends \PHPUnit_Framework_TestCase
 {
     public function testGetAccessToken()
     {
-        $persister = new Persister();
-
+        $this->markTestSkipped();
     }
 } 
